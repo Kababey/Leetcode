@@ -8,7 +8,7 @@ class Solution {
     for (int i = 0; i <= prices.length-1 ; i ++)  {
         if(prices[i] - prices[buy] > profit){
             sell = i;
-            profit = prices[sell] - prices[buy];
+            
             }
 
         if(profit == 0 && prices[buy] > prices[i]){
@@ -22,10 +22,9 @@ class Solution {
         if((prices[i] - prices[min] > profit)){
             sell = i;
             buy = min;
-            profit = prices[sell] - prices[buy];
         }
 
-       
+       profit = prices[sell] - prices[buy];
     }
     return profit;
 
